@@ -2,6 +2,10 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
+    
+
     const hamburger = document.querySelector(".hamburger-menu");
     const menuContainer = document.querySelector(".nutribump_ul_container");
 
@@ -24,17 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("searchPopup").style.display = "block";
     });
 
-    var currentPage = localStorage.getItem('activePage');
+    var currentPage = sessionStorage.getItem('activePage');
 
-    if (lpage === "home") {
-        console.log('remove')
-        document.querySelector(`.nutribump_menu li a[data-page="home"]`).classList.remove('active');
-    }
+     
 
 
 
     if (currentPage) {
-
+        if (lpage === "home") {
+         
+            document.querySelector(`.nutribump_menu li a[data-page="home"]`).classList.remove('active');
+        }
         document.querySelector(`.nutribump_menu li a[data-page="${currentPage}"]`).classList.add('active');
     }
 
@@ -47,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.add('active');
 
             var page = this.getAttribute('data-page');
-            localStorage.setItem('activePage', page);
+            sessionStorage.setItem('activePage', page);
         });
     });
 
