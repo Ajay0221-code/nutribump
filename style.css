@@ -66,9 +66,18 @@ nav {
     background-color: #f084d4;
 }
 
-.active {
+.nav-link a{
+    color: #1e0a19;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+} 
+
+.nutribump_menu li a.active {
     color: #f084d4;
 }
+
+ 
 
 .nutribump_logo img {
     height: 100%;
@@ -179,6 +188,7 @@ nav {
 
 .search-popup input[type="text"]:focus {
     border-bottom-color: #f084d4;
+    min-width: 350px;
     /* Change color on focus if needed */
 }
 
@@ -522,6 +532,20 @@ nav {
     border-radius: 26px;
 }
 
+.button:hover{
+    background-color: #6d285e;
+    border: none;
+    color: #e8e4e7;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 26px;
+}
+
 .filter_tag {
     text-align: center;
     margin-top: 40px;
@@ -591,6 +615,7 @@ nav {
 .next {
     cursor: pointer;
     position: absolute;
+    background-color: #f040c1 !important;
     top: 50%;
     width: auto;
     margin-top: -22px;
@@ -779,8 +804,9 @@ nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: 6D285E;
+    background-color: #6d285e;
     color: white;
+    letter-spacing: 1px;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
